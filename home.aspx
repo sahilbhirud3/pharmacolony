@@ -9,23 +9,23 @@
     <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PharmaColony</title>
-  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com" />
-  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template" />
+ 
    <link rel="icon" href="img/favi1.png" type="png" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal" />
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
    <link rel="stylesheet" type="text/css" href="css/registration.css" />
-
+      <link rel="stylesheet" type="text/css" href="css/imgslider.css" />
     
-
+    <script src="https://kit.fontawesome.com/cf71eb30e3.js" crossorigin="anonymous"></script>
+ 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <form id="form1" runat="server">
         <div>
-  <section id="banner" class="banner">
-    <div class="bg-color">
+  <section id="banner" class="banner" style="width:auto;">
+    <div class="bg-color" >
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="col-md-12">
@@ -35,12 +35,15 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-              <a class="navbar-brand" href="#"><img src="img/pharmalogo.gif" class="img-responsive" style="width: 140px; margin-top: -16px;" /></a>
+                <div class="navbar-brand" style="height:50px;width:50px;padding:unset">
+    <img src="img/newlogo.gif" class="img-responsive" /></div><img src="img/newlogo.png" />
+
+				               
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#banner">Home</a></li>
-                <li class=""><a href="#statistics">Statistics</a></li>
+                <li class=""><a href="#explore">Explore</a></li>
                 <li class=""><a href="#registration">Registration</a></li>
                 <li class=""><a href="#login">Login</a></li>
                 <li class=""><a href="#contact">Contact</a></li>
@@ -50,9 +53,9 @@
           </div>
         </div>
       </nav>
-      <div class="container">
-        <div class="row">
-          <div class="banner-info">
+      <div class="container" >
+        <div class="row"  >
+          <div class="banner-info" style="justify-content:center;" >
             <div class="banner-logo text-center">
               <img src="img/pharmalogo.gif" height="160" width="200" class="img-responsive" />
             </div>
@@ -62,7 +65,7 @@
               <a href="#login" class="btn btn-appoint">LOGIN</a>
             </div>
             <div class="overlay-detail text-center">
-              <a href="#statistics"><i class="fa fa-angle-down"></i></a>
+              <a href="#explore"><i class="fa fa-angle-down"></i></a>
             </div>
           </div>
         </div>
@@ -70,343 +73,232 @@
     </div>
   </section>
   <!--/ banner-->
-  <!--statistics-->
-  <section id="statistics" class="section-padding">
-    <div class="container">
+  <!--explore-->
+  <section id="explore" class="section-padding">
+   
+     
+      <%-- <div style="flex: inherit;
+  width: 100%;
+  height: 837px;
+  display: flex;
+  position: inherit;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: flex-start;
+  background-image: url("/playground_assets/bgimg1-900h.png");">
+       <div class="home-stats row" style=" width: 100%;
+  height: 175px;
+  display: flex;
+  grid-gap: var(--dl-space-space-twounits);
+  max-width: var(--dl-size-size-maxwidth);
+  margin-top: var(--dl-space-space-fourunits);
+  padding-top: var(--dl-space-space-threeunits);
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-threeunits);
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;">
+    <div class="home-stat col" style="display: flex;
+  align-items: center;
+  margin-left: 0px;
+  flex-direction: column;">
+          <h1 class="home-text05" style="color: #FF7C4C;font-size: 3rem;">
+            <span>50</span>
+            <span>+</span>
+          </h1>
+          <span class="home-text08" style=" font-size: 1.15rem;
+    margin-top: var(--dl-space-space-halfunit);
+    text-align: center;">Registered Medicals</span>
+        </div>
+    <div class="home-stat1 col" style=" display: flex;
+  align-items: center;
+  padding-left: 0px;
+  flex-direction: column;
+  justify-content: space-between;">
+          <h1 class="home-text09" style=" color: #FF7C4C;
+    font-size: 3rem;"><span>369</span></h1>
+          <span class="home-text11" style="  font-size: 1.15rem;
+    margin-top: var(--dl-space-space-halfunit);
+    text-align: center;">Registered Distributors</span>
+        </div>
+     </div>
+          </div>--%>
+      <br /><br />
+      <div class="container">
       <div class="row">
         <div class="col-md-4 col-sm-4">
-          <h2 class="ser-title">Our Service</h2>
+          <h2 class="ser-title">Explore</h2>
           <hr class="botm-line" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris cillum.</p>
+         <p>Get rid from long queues and waiting<br /> Place your orders at one click for multiple distributors<br />Get wider range of company's distributor for drugs/medicines.</br> Use our website and save your precious time</p>
+            <br /></br><img src="img/stat.png" width="320px"/>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="service-info">
             <div class="icon">
-              <i class="fa fa-stethoscope"></i>
+              <i class="fa-solid fa-gears"></i>
             </div>
             <div class="icon-info">
-              <h4>24 Hour Support</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>24 Hour Service</h4>
+              <p>Place order at anytime & from anywhere.</p><br /><br />
             </div>
           </div>
           <div class="service-info">
             <div class="icon">
-              <i class="fa fa-ambulance"></i>
+             <i class="fas fa-clinic-medical"></i>
             </div>
             <div class="icon-info">
-              <h4>Emergency Services</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h2><asp:TextBox ID="TextBox1" runat="server" BorderColor="White" BorderStyle="None" Enabled="False">355</asp:TextBox> </h2><br />
+              <p>Medical Registered Already</p>
+               
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="service-info">
             <div class="icon">
-              <i class="fa fa-user-md"></i>
+             <i class="fa-solid fa-briefcase"></i>
             </div>
             <div class="icon-info">
-              <h4>Medical Counseling</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>Explore more Companies & Distributors</h4>
+              <p>Search more options for one medicine,see  more details about medicine. </p><br />
             </div>
           </div>
           <div class="service-info">
             <div class="icon">
-              <i class="fa fa-medkit"></i>
+             <i class="fa-solid fa-building-circle-arrow-right"></i>
             </div>
             <div class="icon-info">
-              <h4>Premium Healthcare</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h2><asp:TextBox ID="TextBox2" runat="server" BorderColor="White" BorderStyle="None" Enabled="False">238</asp:TextBox></h2><br />
+              <p>Distributors Registered Already</p>
+                
             </div>
           </div>
         </div>
       </div>
     </div>
+
+<header>
+  
+
+  <div class="row1 small">
+    <div class="imagegroup" style="animation-delay: 1s;">
+       
+        <img src="img/divis.jpg" />
+        <img src="img/drreddy.jpg" />
+       
+        <img src="img/Pfizer-BioNTech.jpg" />
+        
+        <img src="img/Zydus.jpg" />
+        <img src="img/cipla.jpg" />
+        <img src="img/biocon-biologics-logo.jpg" />
+        <img src="img/cadila.png" />
+         <img src="img/lupin.jpg" />
+        <img src="img/Torrent_Pharma.jpg" />
+    </div>
+  </div>
+</header>
+
+
+
+
   </section>
   <!--/ service-->
   <!--cta-->
   <section id="cta-1" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="schedule-tab">
-          <div class="col-md-4 col-sm-4 bor-left">
-            <div class="mt-boxy-color"></div>
-            <div class="medi-info">
-              <h3>Emergency Case</h3>
-              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="medi-info">
-              <h3>Emergency Case</h3>
-              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 mt-boxy-3">
-            <div class="mt-boxy-color"></div>
-            <div class="time-info">
-              <h3>Opening Hours</h3>
-              <table style="margin: 8px 0px 0px;" border="1">
-                <tbody>
-                  <tr>
-                    <td>Monday - Friday</td>
-                    <td>8.00 - 17.00</td>
-                  </tr>
-                  <tr>
-                    <td>Saturday</td>
-                    <td>9.30 - 17.30</td>
-                  </tr>
-                  <tr>
-                    <td>Sunday</td>
-                    <td>9.30 - 15.00</td>
-                  </tr>
-                </tbody>
-                  <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                  </asp:RadioButtonList>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+     
   </section>
   <!--cta-->
   <!--registration-->
-  <section id="registration" class="section-padding">
- <div class="container register">
-                <div class="row">
-                    <div class="col-md-3 register-left">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                        <h3>Welcome</h3>
-                        <p>You are 30 seconds away from earning your own money!</p>
-                        <input type="submit" name="" value="Login"/><br/>
-                    </div>
-                    <div class="col-md-9 register-right">
-                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Employee</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hirer</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Apply as a Employee</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="maxl">
-                                                <label class="radio inline"> 
-                                                    <input type="radio" name="gender" value="male" checked />
-                                                    <span> Male </span> 
-                                                </label>
-                                                <label class="radio inline"> 
-                                                    <input type="radio" name="gender" value="female" />
-                                                    <span>Female </span> 
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
-                                        </div>
-                                        <input type="submit" class="btnRegister"  value="Register"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <h3  class="register-heading">Apply as a Hirer</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="`Answer *" value="" />
-                                        </div>
-                                        <input type="submit" class="btnRegister"  value="Register"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-  </section>
+ 
   <!--/ about-->
-  <!--doctor team-->
-  <section id="doctor-team" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="ser-title">Meet Our Doctors!</h2>
-          <hr class="botm-line">
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-6">
-          <div class="thumbnail">
-            <img src="img/doctor1.jpg" alt="..." class="team-img">
-            <div class="caption">
-              <h3>Jessica Wally</h3>
-              <p>Doctor</p>
-              <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-6">
-          <div class="thumbnail">
-            <img src="img/doctor2.jpg" alt="..." class="team-img">
-            <div class="caption">
-              <h3>Iai Donas</h3>
-              <p>Doctor</p>
-              <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-6">
-          <div class="thumbnail">
-            <img src="img/doctor3.jpg" alt="..." class="team-img">
-            <div class="caption">
-              <h3>Amanda Denyl</h3>
-              <p>Doctor</p>
-              <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-6">
-          <div class="thumbnail">
-            <img src="img/doctor4.jpg" alt="..." class="team-img">
-            <div class="caption">
-              <h3>Jason Davis</h3>
-              <p>Doctor</p>
-              <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ doctor team-->
+ >
   <!--LOGIN-->
-  <section id="login" class="section-padding">
+  
+    <section id="login" class="section-padding"><br />
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="ser-title">see what patients are saying?</h2>
+          <h2 class="ser-title">Access to Medilife !!!</h2>
           <hr class="botm-line">
         </div>
         <div class="col-md-4 col-sm-4">
-          <div class="testi-details">
+          <div class="testi-details text-center">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="testi-info">
+<h3><a href="https://www.screener.in/screens/665858/best-fundamental-stocks/" class=""> Login &nbsp   <span class="fa-solid fa-arrow-right"></span> </a> </h3> <br /></div>
+      
+            <div class="testi-info">
             <!-- User Image -->
-            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
+                <img src="img/medical.png" />
             <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
+            <h3>Medical<span>Login</span></h3>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
-          <div class="testi-details">
+          <div class="testi-details text-center">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="testi-info">
+ <h3><a href="https://www.screener.in/screens/665858/best-fundamental-stocks/" class="">Login &nbsp <span class="fa-solid fa-arrow-right"></span></a></h3><br />          </div>
+          <div class="testi-info" >
             <!-- User Image -->
-            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
+              <img src="img/distributor.jpg" />
             <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
+            <h3>Distributor<span>Login</span></h3>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
-          <div class="testi-details">
+          <div class="testi-details text-center">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h3> <a href="https://www.screener.in/screens/665858/best-fundamental-stocks/" class="">Login &nbsp  <span class="fa-solid fa-arrow-right"></span></a></h3><br />
           </div>
           <div class="testi-info">
             <!-- User Image -->
-            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
+            <img src="img/admin.jpg" />
             <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
+            <h3>Admin <span>Login</span></h3>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section>   
+  <%--    <div class="col-md-4 col-sm-4">
+          <div class="testi-details">
+            <!-- Paragraph -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <div class="testi-info">
+            <!-- User Image -->
+            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
+            <!-- User Name -->
+            <h3>Alex<span>Texas</span></h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="testi-details">
+            <!-- Paragraph -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="testi-info">
+            <!-- User Image -->
+            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
+            <!-- User Name -->
+            <h3>Alex<span>Texas</span></h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="testi-details">
+            <!-- Paragraph -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="testi-info">
+            <!-- User Image -->
+            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
+            <!-- User Name -->
+            <h3>Alex<span>Texas</span></h3>
+          </div>
+        </div>--%>
+      
+ 
   <!--/ testimonial-->
   <!--cta 2-->
   <section id="cta-2" class="section-padding">
@@ -417,12 +309,16 @@
           <h2 class="section-title white lg-line">« A few words<br> about us »</h2>
         </div>
         <div class="col-md-4 col-sm-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typek
-          <p class="text-right text-primary"><i>— Medilap Healthcare</i></p>
+        <p style="color:white">Easy order processing between medical store and distributor.
+Medical stores will easily order medicines through this system effectively and efficiently.
+From this system, medical stores take advantage of placing orders for multiple distributors in one order place.
+Distributor will process orders received from medical stores through this system.</p>  
+
+          <p class="text-right text-primary" style="color:aqua">— PharmaColony</p>
         </div>
         <div class="col-md-2"></div>
       </div>
-    </div>
+    </div><br />
   </section>
   <!--cta-->
   <!--contact-->
@@ -436,38 +332,42 @@
         <div class="col-md-4 col-sm-4">
           <h3>Contact Info</h3>
           <div class="space"></div>
-          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br> New York, NY 17022</p>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>KTHM College<br> Gangapur Road, Nashik 422002</p>
           <div class="space"></div>
-          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@companyname.com</p>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>chaitanyabhavar2021@gmail.com<br />sahilbhirud3@gmail.com</p>
           <div class="space"></div>
-          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+1 800 123 1234</p>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+91 9579213171 <br /> +91 8600386608</p>
         </div>
         <div class="col-md-8 col-sm-8 marb20">
           <div class="contact-info">
-            <h3 class="cnt-ttl">Having Any Query! Or Book an appointment</h3>
+            <h3 class="cnt-ttl">Having Any Query! </h3>
             <div class="space"></div>
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
             <form action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
+                  <asp:TextBox ID="TextBox3" class="form-control br-radius-zero" placeholder="Your Name" runat="server"></asp:TextBox>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field" ControlToValidate="TextBox3"></asp:RequiredFieldValidator><div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
+                  <asp:TextBox ID="TextBox4" class="form-control br-radius-zero" placeholder="Your Email" runat="server"></asp:TextBox>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredField" Font-Overline="False" ControlToValidate="TextBox4"></asp:RequiredFieldValidator>
+                  <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validation"></div>
+                  <asp:TextBox ID="TextBox5" class="form-control br-radius-zero" placeholder="Subject" runat="server"></asp:TextBox>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required Field" ControlToValidate="TextBox5"></asp:RequiredFieldValidator>
+                  <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validation"></div>
+                  <asp:TextBox ID="TextBox6" class="form-control br-radius-zero" placeholder="Message" runat="server" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Required Field" ControlToValidate="TextBox6"></asp:RequiredFieldValidator>
+                  <div class="validation"></div>
               </div>
 
               <div class="form-action">
-                <button type="submit" class="btn btn-form">Send Message</button>
+                  <asp:Button ID="Button1" class="btn btn-form" runat="server" Text="Send Message" />
+             
               </div>
             </form>
           </div>
@@ -486,7 +386,8 @@
               <h4 class="white no-padding">About Us</h4>
             </div>
             <div class="info-sec">
-              <p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>
+              <p>This website built to handle medical stores orders and also distributors order processing<br /> in effective manner.<br /><br />
+              </p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
@@ -495,24 +396,32 @@
             </div>
             <div class="info-sec">
               <ul class="quick-info">
-                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
-                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+                <li><a href="#banner"><i class="fa-solid fa-house fa-fa-4x" style="font-size:medium"></i>&nbsp Home</a></li><br />
+                <li><a href="#explore"><i class="fa-brands fa-wpexplorer" style="font-size:medium"></i>&nbsp Explore</a></li><br />
+                <li><a href="#contact"><i class="fa-solid fa-address-card" style="font-size:medium"></i>&nbsp Contact</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
             <div class="ftr-tle">
               <h4 class="white no-padding">Follow us</h4>
-            </div>
+                <h4 class="white no-padding">Build by :<br /><span style="margin-left:80px">Bhavar Chaitanya Sitaram</h4>
+                 <div class="info-sec">
+              <ul class="social-icon" style="margin-left:80px">
+                <a href="https://instagram.com/chaitanya_s_bhavar96k?igshid=YmMyMTA2M2Y="><li><img src="img/instagram.png" /></li></a> 
+                <a href="https://www.linkedin.com/in/chaitanyabhavar246"><li><img src="img/linkedin.png" /></li></a>
+              </ul>
+            </div></span><br /><br />
+  <Br /><h4 class="white no-padding" style="margin-left:80px">Bhirud Sahil Chudaman</h4>
+            
             <div class="info-sec">
-              <ul class="social-icon">
-                <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
-                <li class="bgred"><i class="fa fa-google-plus"></i></li>
-                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
-                <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
+              <ul class="social-icon" style="margin-left:80px">
+                  
+                <a href="https://instagram.com/sahil.bhirud__sb?igshid=YmMyMTA2M2Y="><li><img src="img/instagram.png" /></li></a> 
+                <a href="https://www.linkedin.com/in/sahil-bhirud-scb712"><li><img src="img/linkedin.png" /></li></a>
               </ul>
             </div>
+                </div>
           </div>
         </div>
       </div>
@@ -521,16 +430,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            © Copyright Medilab Theme. All Rights Reserved
-            <div class="credits">
-              <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
-              -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
-            </div>
+         PharmaColony  &nbsp &nbsp  A Better access to medilife  &nbsp &nbsp @2022    
+            
           </div>
         </div>
       </div>
