@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-   <link rel="stylesheet" type="text/css" href="css/registration.css" />
+   
       <link rel="stylesheet" type="text/css" href="css/imgslider.css" />
     
     <script src="https://kit.fontawesome.com/cf71eb30e3.js" crossorigin="anonymous"></script>
@@ -44,7 +44,7 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#banner">Home</a></li>
                 <li class=""><a href="#explore">Explore</a></li>
-                <li class=""><a href="#registration">Registration</a></li>
+                <li class=""><a href="registration.aspx">Registration</a></li>
                 <li class=""><a href="#login">Login</a></li>
                 <li class=""><a href="#contact">Contact</a></li>
                   
@@ -75,55 +75,6 @@
   <!--/ banner-->
   <!--explore-->
   <section id="explore" class="section-padding">
-   
-     
-      <%-- <div style="flex: inherit;
-  width: 100%;
-  height: 837px;
-  display: flex;
-  position: inherit;
-  align-items: center;
-  flex-direction: column;
-  background-size: cover;
-  justify-content: flex-start;
-  background-image: url("/playground_assets/bgimg1-900h.png");">
-       <div class="home-stats row" style=" width: 100%;
-  height: 175px;
-  display: flex;
-  grid-gap: var(--dl-space-space-twounits);
-  max-width: var(--dl-size-size-maxwidth);
-  margin-top: var(--dl-space-space-fourunits);
-  padding-top: var(--dl-space-space-threeunits);
-  padding-left: var(--dl-space-space-threeunits);
-  padding-right: var(--dl-space-space-threeunits);
-  padding-bottom: var(--dl-space-space-threeunits);
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;">
-    <div class="home-stat col" style="display: flex;
-  align-items: center;
-  margin-left: 0px;
-  flex-direction: column;">
-          <h1 class="home-text05" style="color: #FF7C4C;font-size: 3rem;">
-            <span>50</span>
-            <span>+</span>
-          </h1>
-          <span class="home-text08" style=" font-size: 1.15rem;
-    margin-top: var(--dl-space-space-halfunit);
-    text-align: center;">Registered Medicals</span>
-        </div>
-    <div class="home-stat1 col" style=" display: flex;
-  align-items: center;
-  padding-left: 0px;
-  flex-direction: column;
-  justify-content: space-between;">
-          <h1 class="home-text09" style=" color: #FF7C4C;
-    font-size: 3rem;"><span>369</span></h1>
-          <span class="home-text11" style="  font-size: 1.15rem;
-    margin-top: var(--dl-space-space-halfunit);
-    text-align: center;">Registered Distributors</span>
-        </div>
-     </div>
-          </div>--%>
       <br /><br />
       <div class="container">
       <div class="row">
@@ -225,7 +176,7 @@
         <div class="col-md-4 col-sm-4">
           <div class="testi-details text-center">
             <!-- Paragraph -->
-<h3><a href="https://www.screener.in/screens/665858/best-fundamental-stocks/" class=""> Login &nbsp   <span class="fa-solid fa-arrow-right"></span> </a> </h3> <br /></div>
+<h3><a href="medicalLogin.aspx" class=""> Login &nbsp   <span class="fa-solid fa-arrow-right"></span> </a> </h3> <br /></div>
       
             <div class="testi-info">
             <!-- User Image -->
@@ -237,7 +188,7 @@
         <div class="col-md-4 col-sm-4">
           <div class="testi-details text-center">
             <!-- Paragraph -->
- <h3><a href="https://www.screener.in/screens/665858/best-fundamental-stocks/" class="">Login &nbsp <span class="fa-solid fa-arrow-right"></span></a></h3><br />          </div>
+ <h3><a href="distributorLogin.aspx" class="">Login &nbsp <span class="fa-solid fa-arrow-right"></span></a></h3><br />          </div>
           <div class="testi-info" >
             <!-- User Image -->
               <img src="img/distributor.jpg" />
@@ -248,7 +199,7 @@
         <div class="col-md-4 col-sm-4">
           <div class="testi-details text-center">
             <!-- Paragraph -->
-          <h3> <a href="https://www.screener.in/screens/665858/best-fundamental-stocks/" class="">Login &nbsp  <span class="fa-solid fa-arrow-right"></span></a></h3><br />
+          <h3> <a href="adminLogin.aspx" class="">Login &nbsp  <span class="fa-solid fa-arrow-right"></span></a></h3><br />
           </div>
           <div class="testi-info">
             <!-- User Image -->
@@ -260,45 +211,6 @@
       </div>
     </div>
   </section>   
-  <%--    <div class="col-md-4 col-sm-4">
-          <div class="testi-details">
-            <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-
-          <div class="testi-info">
-            <!-- User Image -->
-            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
-            <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <div class="testi-details">
-            <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="testi-info">
-            <!-- User Image -->
-            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
-            <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <div class="testi-details">
-            <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="testi-info">
-            <!-- User Image -->
-            <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
-            <!-- User Name -->
-            <h3>Alex<span>Texas</span></h3>
-          </div>
-        </div>--%>
-      
- 
   <!--/ testimonial-->
   <!--cta 2-->
   <section id="cta-2" class="section-padding">

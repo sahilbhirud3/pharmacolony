@@ -72,6 +72,7 @@ banner
 }
 .navbar {
     border-radius: 0px;
+
 }
 
 .navbar-brand
@@ -294,7 +295,7 @@ testimonial
     background-color: #eee;
 }
 .testi-details {
-    background: #fff;
+    background: #dcf2e2;
     padding: 14px 24px;
     margin-bottom: 20px;
     box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.18);
@@ -334,7 +335,7 @@ testimonial
     border-left: 0;
     bottom: -40px;
     left: 56px;
-    border-top-color: #fff;
+    border-top-color: #dcf2e2;
     border-width: 20px;
 }
 .testi-details::before {
