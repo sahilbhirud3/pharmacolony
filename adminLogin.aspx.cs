@@ -49,7 +49,7 @@ namespace pharmacolony
             else
             {
                     Session["email"] = vemail;
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='mediDash.aspx'", true);
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='adminDash.aspx'", true);
 
  
             }

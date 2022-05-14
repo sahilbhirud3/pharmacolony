@@ -35,13 +35,16 @@
        
 
 <div class="container register">
+
                 <div class="row">
     
                     <div class="col-md-3 register-left">
                         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
                         <h2><b>PharmaColony<br />Welcomes You!!</b></h2>
                         <p><h5>You are 30 seconds away from your orders!</h5></p>
+
                       <a href="home.aspx#login">  <input name="" value="Login" style="text-align:center"/></a><br/>
+                         <a href="home.aspx" >  <input name=""  value="Home" style="text-align:center"/></a><br/>
                     </div>
                     <div class="col-md-9 register-right">
                         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">

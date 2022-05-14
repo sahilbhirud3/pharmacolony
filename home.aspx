@@ -22,6 +22,7 @@
  
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    
     <form id="form1" runat="server">
         <div>
   <section id="banner" class="banner" style="width:auto;">
@@ -36,7 +37,7 @@
 				        <span class="icon-bar"></span>
 				      </button>
                 <div class="navbar-brand" style="height:50px;width:50px;padding:unset">
-    <img src="img/newlogo.gif" class="img-responsive" /></div><img src="img/newlogo.png" />
+    <%--<img src="img/newlogo.gif" class="img-responsive" />--%></div><img src="img/newlogo1.gif" />
 
 				               
             </div>
@@ -256,32 +257,32 @@ Distributor will process orders received from medical stores through this system
             <div class="space"></div>
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <div class="contactForm">
               <div class="form-group">
-                  <asp:TextBox ID="TextBox3" class="form-control br-radius-zero" placeholder="Your Name" runat="server"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field" ControlToValidate="TextBox3"></asp:RequiredFieldValidator><div class="validation"></div>
+                  <asp:TextBox ID="qname"  class="form-control br-radius-zero" placeholder="Your Name" runat="server"></asp:TextBox>
+                  <asp:RequiredFieldValidator ValidationGroup="query" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field" ControlToValidate="qname"></asp:RequiredFieldValidator><div class="validation"></div>
               </div>
               <div class="form-group">
-                  <asp:TextBox ID="TextBox4" class="form-control br-radius-zero" placeholder="Your Email" runat="server"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredField" Font-Overline="False" ControlToValidate="TextBox4"></asp:RequiredFieldValidator>
+                  <asp:TextBox ID="qemail" TextMode="Email" class="form-control br-radius-zero" placeholder="Your Email" runat="server"></asp:TextBox>
+                  <asp:RequiredFieldValidator ValidationGroup="query" ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredField" Font-Overline="False" ControlToValidate="qemail"></asp:RequiredFieldValidator>
                   <div class="validation"></div>
               </div>
               <div class="form-group">
-                  <asp:TextBox ID="TextBox5" class="form-control br-radius-zero" placeholder="Subject" runat="server"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required Field" ControlToValidate="TextBox5"></asp:RequiredFieldValidator>
+                  <asp:TextBox ID="qsub" class="form-control br-radius-zero" placeholder="Subject" runat="server"></asp:TextBox>
+                  <asp:RequiredFieldValidator ValidationGroup="query" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required Field" ControlToValidate="qsub"></asp:RequiredFieldValidator>
                   <div class="validation"></div>
               </div>
               <div class="form-group">
-                  <asp:TextBox ID="TextBox6" class="form-control br-radius-zero" placeholder="Message" runat="server" TextMode="MultiLine" Rows="5"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Required Field" ControlToValidate="TextBox6"></asp:RequiredFieldValidator>
+                  <asp:TextBox ID="qmsg"  class="form-control br-radius-zero" placeholder="Message" runat="server" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                  <asp:RequiredFieldValidator ValidationGroup="query" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Required Field" ControlToValidate="qmsg"></asp:RequiredFieldValidator>
                   <div class="validation"></div>
+              </div>
+              <div class="form-action">
+                  <asp:Button ID="Button1" ValidationGroup="query" OnClick="query_Click" CssClass="btn btn-form" runat="server" Text="Send Message" />
+      
               </div>
 
-              <div class="form-action">
-                  <asp:Button ID="Button1" class="btn btn-form" runat="server" Text="Send Message" />
-             
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>

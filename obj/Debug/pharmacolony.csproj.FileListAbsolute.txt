@@ -183,3 +183,9 @@ C:\Users\CHAITANYA\source\repos\pharmacolony1\obj\Debug\pharmacolony.csproj.Core
 C:\Users\CHAITANYA\source\repos\pharmacolony1\obj\Debug\pharmacolony.csproj.CopyComplete
 C:\Users\CHAITANYA\source\repos\pharmacolony1\obj\Debug\pharmacolony.dll
 C:\Users\CHAITANYA\source\repos\pharmacolony1\obj\Debug\pharmacolony.pdb
+C:\Users\CHAITANYA\source\repos\pharmacolony1\bin\MongoDB.Driver.Legacy.dll
+C:\Users\CHAITANYA\source\repos\pharmacolony1\bin\MongoDB.Driver.Legacy.xml
+C:\Users\CHAITANYA\source\repos\pharmacolony1\bin\EntityFramework.dll
+C:\Users\CHAITANYA\source\repos\pharmacolony1\bin\EntityFramework.SqlServer.dll
+C:\Users\CHAITANYA\source\repos\pharmacolony1\bin\EntityFramework.xml
+C:\Users\CHAITANYA\source\repos\pharmacolony1\bin\EntityFramework.SqlServer.xml

@@ -62,7 +62,7 @@ namespace pharmacolony
             var combinefil = Builders<BsonDocument>.Filter.Or(filter1,filter);
 
             var present =  things.Find(combinefil).FirstOrDefault();
-            if (present == null)
+            if (present == null)//to check already register or not
             {
                
                         var doc = new BsonDocument

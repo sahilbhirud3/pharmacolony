@@ -1,18 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="distributorLogin.aspx.cs" Inherits="pharmacolony.distributorLogin" %>
+﻿<%@ Page Language="C#"  MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="distributorLogin.aspx.cs" Inherits="pharmacolony.distributorLogin" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
     <link rel="icon" href="img/favi1.png" type="png" />
       <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
     <link href="css/login.css" rel="stylesheet" />
-</head>
-<body>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
       <section class="vh-100">
   <div class="container-fluid h-custom">
@@ -47,12 +45,7 @@
 
           <div class="d-flex justify-content-between align-items-center">
             <!-- Checkbox -->
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                Remember me
-              </label>
-            </div>
+            
             <a href="#!" class="text-body">Forgot password?</a>
           </div>
 
@@ -78,5 +71,4 @@
   </div>
 </section>
     </form>
-</body>
-</html>
+</asp:Content>
