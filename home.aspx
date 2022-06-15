@@ -36,7 +36,7 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-                <div class="navbar-brand" style="height:50px;width:50px;padding:unset">
+                <div class="navbar-brand" style="height:50px;padding:unset">
     <%--<img src="img/newlogo.gif" class="img-responsive" />--%></div><img src="img/newlogo1.gif" />
 
 				               
@@ -100,7 +100,7 @@
              <i class="fas fa-clinic-medical"></i>
             </div>
             <div class="icon-info">
-              <h2><asp:TextBox ID="TextBox1" runat="server" BorderColor="White" BorderStyle="None" Enabled="False">355</asp:TextBox> </h2><br />
+              <h2><asp:Label ID="Label2" runat="server" Text="Label">238</asp:Label></h2><br />
               <p>Medical Registered Already</p>
                
             </div>
@@ -121,7 +121,8 @@
              <i class="fa-solid fa-building-circle-arrow-right"></i>
             </div>
             <div class="icon-info">
-              <h2><asp:TextBox ID="TextBox2" runat="server" BorderColor="White" BorderStyle="None" Enabled="False">238</asp:TextBox></h2><br />
+           
+              <h2><asp:Label ID="Label1" runat="server" Text="Label">238</asp:Label></h2><br />
               <p>Distributors Registered Already</p>
                 
             </div>
@@ -278,8 +279,8 @@ Distributor will process orders received from medical stores through this system
                   <div class="validation"></div>
               </div>
               <div class="form-action">
-                  <asp:Button ID="Button1" ValidationGroup="query" OnClick="query_Click" CssClass="btn btn-form" runat="server" Text="Send Message" />
-      
+                  <asp:Button ID="Button1" ValidationGroup="query" CssClass="btn btn-form" runat="server" Text="Send Message" />
+      <%--OnClick="query_Click" --%>
               </div>
 
             </div>

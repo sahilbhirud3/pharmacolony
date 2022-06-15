@@ -11,11 +11,7 @@ namespace pharmacolony
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["email"] == null )
-            //{               
-            //    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You are not logged in,Try Login'); window.location.href='home.aspx#login'", true);
-
-            //}
+            
 
         }
         

@@ -11,10 +11,7 @@ namespace pharmacolony
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["email"] != null)
-            {
-                Label1.Text = (string)Session["email"];
-            }
+
         }
     }
 }

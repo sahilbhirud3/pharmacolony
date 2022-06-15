@@ -8,11 +8,16 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Security.Cryptography;
 using System.Text;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace pharmacolony
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,42 +31,37 @@ namespace pharmacolony
         }
         protected void Button1_mediLogin(object sender, EventArgs e)
         {
-            String vemail = String.Empty;
-            String pass = String.Empty;
-            var client = new MongoClient("mongodb+srv://pharmacolony:pharmadb123@pharmacolony.ywbv8.mongodb.net/test");
-            var db = client.GetDatabase("pharmacolony");
-            var things = db.GetCollection<BsonDocument>("medical");
-            vemail = email.Text;
-            pass = EncodePasswordToBase64(password.Text);
-
-        
-            var filter = Builders<BsonDocument>.Filter.Eq("email", vemail);
-            var filter1 = Builders<BsonDocument>.Filter.Eq("password", pass);
-    
-            var combinefil = Builders<BsonDocument>.Filter.And(filter1, filter);
-
-            var present = things.Find(combinefil).FirstOrDefault();
-            if (present == null)
+            string encryptpass = EncodePasswordToBase64(password.Text);
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from medical where email =@email and password=@password", con);
+            cmd.Parameters.AddWithValue("@email", email.Text);
+            cmd.Parameters.AddWithValue("@password", encryptpass);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Incorrect Credential')", true);
-
-            }
-            else
-            {
-                if (present.GetElement("status").Value==1)
+                if(dt.Rows[0]["status"].Equals(1))
                 {
-                    Session["email"] = vemail;
+                    Session["email"] = email.Text;
+                    Session["medicalName"] = dt.Rows[0]["medicalName"];
+                    Session["licno"] = dt.Rows[0]["licNo"];
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='mediDash.aspx'", true);
 
                 }
                 else
                 {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Account not activated yet')", true);
 
-
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Account is not Active yet !!')", true);
                 }
-
             }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Incorrect Credential')", true);
+            }
+
+
 
         }
     }

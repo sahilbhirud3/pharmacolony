@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>pharmacolony</title>
-    
+     <link rel="icon" href="img/favi1.png" type="png" />
     <!-- Favicon icon -->
 <%--    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">--%>
     <link rel="icon" type="image/png" sizes="16x16" src="img/favicon.png" />
@@ -67,8 +67,8 @@
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg "
                     href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i
                         class="ti-menu"></i></a>
-                <div class="top-left-part"><a class="logo" href="dashboard.html">
-                    <i class="fa-solid fa-user-gear"></i>&nbsp;&nbsp;&nbsp;<span class="hidden-xs">Admin</span></a></div>
+                <div class="top-left-part"><a class="logo" href="adminDash.aspx">
+                    <i class="fa-solid fa-user-gear"></i>&nbsp;&nbsp;&nbsp;HI&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" class="hidden-xs"></asp:Label></a></div>
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
                     <li><a src="javascript:void(0)" class="open-close hidden-xs hidden-lg
  waves-effect waves-light">
@@ -106,23 +106,21 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
+                        <a href="adminDash.aspx" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
                             Dashboard</a>
                     </li>
-                    <li>
-                        <a href="#" class="waves-effect"><i class="fa-solid fa-user"></i>&nbsp Profile</a>
-                    </li>
+                   
                     <li>
                         <a href="approveMed.aspx" class="waves-effect"><i class="fa-solid fa-laptop-medical"></i>&nbsp Approve Medical</a>
                     </li>
                     <li>
-                        <a href="#" class="waves-effect"><i class="fa-solid fa-building-circle-arrow-right"></i>&nbsp Approve Distributor</a>
+                        <a href="approveDist.aspx" class="waves-effect"><i class="fa-solid fa-building-circle-arrow-right"></i>&nbsp Approve Distributor</a>
                     </li>
                     <li>
-                        <a href="#" class="waves-effect"><i class="fa-solid fa-house-medical"></i>&nbsp; All Medicals</a>
+                        <a href="showMed.aspx" class="waves-effect"><i class="fa-solid fa-house-medical"></i>&nbsp; All Medicals</a>
                     </li>
                     <li>
-                        <a href="#" class="waves-effect"><i class="fa-solid fa-house-chimney-medical"></i>&nbsp; All Distributors</a>
+                        <a href="showDist.aspx" class="waves-effect"><i class="fa-solid fa-house-chimney-medical"></i>&nbsp; All Distributors</a>
                     </li>
                     <%--<li>
                         <a href="404.html" class="waves-effect"><i class="fa-solid fa-barcode-read"></i>&nbsp; Order</a>
@@ -141,8 +139,7 @@
         <!-- /#page-wrappe
        r -->
            </form>
-        <footer class="footer text-center"> 2020 &copy; Myadmin brought to you by <a
-                href="https://www.wrappixel.com/">wrappixel.com</a> </footer>
+        <footer class="footer text-center"> PharmaColony  &nbsp &nbsp  A Better access to medilife  &nbsp &nbsp @2022    </footer>
     </div>
 
       

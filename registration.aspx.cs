@@ -5,19 +5,19 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
-using MongoDB.Bson;
-using MongoDB.Driver;
 using System.Security.Cryptography;
-
-using System.Threading.Tasks;
-using System.Threading;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace pharmacolony
 {
     public partial class registration : System.Web.UI.Page
     {
         //private CancellationToken cancellationToken;
+        private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
+       
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -31,113 +31,72 @@ namespace pharmacolony
         }
         protected void BtnMedicalReg_Click(object sender, EventArgs e)
         {
-            String name = String.Empty;
-            String vcity = String.Empty;
-            String vstate = String.Empty;
-            String lno = String.Empty;
-            String fname = String.Empty;
-            String lname = String.Empty;
-            String vemail = String.Empty;
-            String contact = String.Empty;
-            String addr = String.Empty;
+           
             String pass = String.Empty;
-
-
-            var client = new MongoClient("mongodb+srv://pharmacolony:pharmadb123@pharmacolony.ywbv8.mongodb.net/test");
-            var db = client.GetDatabase("pharmacolony");
-            var things = db.GetCollection<BsonDocument>("medical");
-
-            name = medicalName.Text;
-            lno = licenseNumber.Text;
-            fname = oFirstName.Text;
-            lname = oLastName.Text;
-            vemail = email.Text;
-            contact = contactNumber.Text;
-            addr = address.Text;
-            vcity = city.Text;
-            vstate = state.Text;
             pass = EncodePasswordToBase64(password.Text);
-            var filter = Builders<BsonDocument>.Filter.Eq("licno", lno);
-            var filter1 = Builders<BsonDocument>.Filter.Eq("email", vemail);
-            var combinefil = Builders<BsonDocument>.Filter.Or(filter1,filter);
+            SqlConnection con = new SqlConnection(connectionString);
+            string encryptpass = EncodePasswordToBase64(password.Text);
 
-            var present =  things.Find(combinefil).FirstOrDefault();
-            if (present == null)//to check already register or not
+            SqlCommand cmd = new SqlCommand("select * from medical where email =@email or licNo=@licNo", con);
+            cmd.Parameters.AddWithValue("@email", email.Text);
+            cmd.Parameters.AddWithValue("@licNo", licenseNumber.Text);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-               
-                        var doc = new BsonDocument
-                    {
-                        {"name", name},{"licno", lno},{"fname", fname},{"lname", lname},
-                        {"email", vemail},{"contact", contact},{"address", addr},
-                        {"city", vcity},{"state", vstate},{"password", pass},{ "status",1}
-
-                    };
-
-                things.InsertOne(doc);
-            
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Successfully,Try Login after sometime'); window.location.href='home.aspx'", true);
-
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Already,Try Login')", true);
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Already,Try Login')", true);
 
+                 string query = "Insert into medical(medicalName,licNo,firstName,lastName,email,contact,address,city,state,password) Values" +
+                     "('" + medicalName.Text + "','" + licenseNumber.Text + "','" + oFirstName.Text + "','" + oLastName.Text + "','" + email.Text + "','" + contactNumber.Text + "','" + address.Text + "','" + city.Text + "','" + state.Text + "','" + pass + "')";
+                 SqlDataAdapter da1 = new SqlDataAdapter(query, con);
+                 con.Open();
+                 da1.SelectCommand.ExecuteNonQuery();
+                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Successfully,Try Login after sometime'); window.location.href='home.aspx'", true);
+
+                 con.Close();
+                
             }
-        }
+        }   
+       
 
-    
-
-        
 
         protected  void BtnDistributorReg_Click(object sender, EventArgs e)
         {
-            String name = String.Empty;
-            String fname = String.Empty;
-            String vemail = String.Empty;
-            String addr = String.Empty;
-            String vstate = String.Empty;
 
-            String lno = String.Empty;
-            String lname = String.Empty;
-            String contact = String.Empty;
-            String vcity = String.Empty;
+
             String pass = String.Empty;
-
-
-            var client = new MongoClient("mongodb+srv://pharmacolony:pharmadb123@pharmacolony.ywbv8.mongodb.net/test");
-            var db = client.GetDatabase("pharmacolony");
-            var things = db.GetCollection<BsonDocument>("distributor");
-
-            name = distributorName.Text;
-            lno = dlicenseNumber.Text;
-            fname = doFirstName.Text;
-            lname = doLastName.Text;
-            vemail = dEmail.Text;
-            contact = dContactNumber.Text;
-            addr = dAddress.Text;
-            vcity = dCity.Text;
-            vstate = dState.Text;
             pass = EncodePasswordToBase64(dPassword.Text);
-            var filter = Builders<BsonDocument>.Filter.Eq("licno", lno);
-            var present = things.Find(filter).FirstOrDefault();
-            if (present == null)
-              {
-                var doc = new BsonDocument
-               {
-                    {"name", name},{"licno", lno},{"fname", fname},{"lname", lname},
-                    {"email", vemail},{"contact", contact},{"address", addr},
-                    {"city", vcity},{"state", vstate},{"password", pass},{ "status",1}
+            SqlConnection con = new SqlConnection(connectionString);
+            string encryptpass = EncodePasswordToBase64(password.Text);
 
-               };
-
-            things.InsertOne(doc);
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Successfully,Try Login after sometime'); window.location.href='home.aspx'", true);
+            SqlCommand cmd = new SqlCommand("select * from distributor where email =@email or licNo=@licNo", con);
+            cmd.Parameters.AddWithValue("@email", dEmail.Text);
+            cmd.Parameters.AddWithValue("@licNo", dlicenseNumber.Text);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Already,Try Login')", true);
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Already,Try Login')", true);
+
+                string query = "Insert into distributor(distributorName,licNo,firstName,lastName,email,contact,address,city,state,password) Values" +
+                    "('" + distributorName.Text + "','" + dlicenseNumber.Text + "','" + doFirstName.Text + "','" + doLastName.Text + "','" + dEmail.Text + "','" + dContactNumber.Text + "','" + dAddress.Text + "','" + dCity.Text + "','" + dState.Text + "','" + pass + "')";
+                SqlDataAdapter da1 = new SqlDataAdapter(query, con);
+                con.Open();
+                da1.SelectCommand.ExecuteNonQuery();
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Successfully,Try Login after sometime'); window.location.href='home.aspx'", true);
+
+                con.Close();
 
             }
+           
         }
     }
 }

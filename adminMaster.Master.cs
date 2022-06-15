@@ -14,11 +14,18 @@ namespace pharmacolony
             if (Session["email"] != null)
             {
                 Label1.Text = (string)Session["email"];
+                Label2.Text = (string)Session["name"];
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You are not logged in,Try Login'); window.location.href='home.aspx#login'", true);
+
             }
         }
         protected void BtnLogout_Click(object sender, EventArgs e)
         {
             Session["email"] = null;
+            Session["name"] = null;
             HttpContext.Current.Session.Clear();
             HttpContext.Current.Session.Abandon();
             HttpContext.Current.Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));

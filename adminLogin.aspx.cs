@@ -4,15 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MongoDB.Bson;
-using MongoDB.Driver;
+using System.Web.Configuration;
 using System.Security.Cryptography;
 using System.Text;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace pharmacolony
 {
     public partial class adminLogin : System.Web.UI.Page
     {
+        private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,34 +29,28 @@ namespace pharmacolony
         }
         protected void Button1_adminLogin(object sender, EventArgs e)
         {
-            String vemail = String.Empty;
-            String pass = String.Empty;
-            var client = new MongoClient("mongodb+srv://pharmacolony:pharmadb123@pharmacolony.ywbv8.mongodb.net/test");
-            var db = client.GetDatabase("pharmacolony");
-            var things = db.GetCollection<BsonDocument>("admin");
-            vemail = email.Text;
-            pass = EncodePasswordToBase64(password.Text);
-
-
-            var filter = Builders<BsonDocument>.Filter.Eq("email", vemail);
-            var filter1 = Builders<BsonDocument>.Filter.Eq("password", pass);
-
-            var combinefil = Builders<BsonDocument>.Filter.And(filter1, filter);
-
-            var present = things.Find(combinefil).FirstOrDefault();
-            if (present == null)
+            string encryptpass = EncodePasswordToBase64(password.Text);
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from admin where email =@email and password=@password", con);
+            cmd.Parameters.AddWithValue("@email", email.Text);
+            cmd.Parameters.AddWithValue("@password", encryptpass);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Incorrect Credential')", true);
+                Session["email"] = email.Text;
+                Session["name"]=dt.Rows[0]["Name"];
 
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='adminDash.aspx'", true);
             }
             else
             {
-                    Session["email"] = vemail;
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='adminDash.aspx'", true);
-
- 
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Incorrect Credential')", true);
             }
-
         }
+        
+       
     }
 }
