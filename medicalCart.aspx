@@ -1,38 +1,37 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mediMaster.Master" AutoEventWireup="true" CodeBehind="mediDash.aspx.cs" Inherits="pharmacolony.mediDash" %>
-
-
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/mediMaster.Master" AutoEventWireup="true" CodeBehind="medicalCart.aspx.cs" Inherits="pharmacolony.medicalCart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-    <link href="css/quantity.css" rel="stylesheet" />
-    <script src="js/quantity.js"></script>
+  <style>
+.btnLogout{
+    margin-top: 10%;
+    border: none;
+    border-radius: 1rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+     
+    cursor: pointer;
+    }
+            </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-   
-    <div id="page-wrapper">
+<div id="page-wrapper">
         <div class="container-fluid">
             <div class="row bg-title">
-                
-                   
-
-
+                <div class="col-lg-12">
+                    <h4 class="page-title">Cart</h4>
+                    <br />
+                   <%-- <div class="row register-form">
+                      
                     <div class="col-md-12">
                         <br />
                         <br />
-                        <h4 class="page-title">All Items Details</h4>
-                        <br />
-                       <%-- <asp:DropDownList ID="DropDownList1"  runat="server" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name"></asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:connectionString %>" SelectCommand="SELECT [name] FROM [item]"></asp:SqlDataSource>
-                       <script type="text/javascript">
-                           $(document).ready(function () { $('#DropDownlist1').select2(); });
-
-                       </script>--%>
-                        <asp:TextBox ID="TextBox1" AutoPostBack="true" OnTextChanged="TextBox1_TextChanged" runat="server"></asp:TextBox>
-    
-                        <asp:GridView ID="grid1" runat="server" AutoGenerateColumns="False" CellPadding="7" Style="display: flex" EditRowStyle-HorizontalAlign="Center" ForeColor="#ccffff" GridLines="Both" OnRowCommand="grid1_RowCommand">
+                        <h4 class="page-title"></h4>
+                        <br />--%>
+                        
+                        <asp:GridView ID="grid1" runat="server" AutoGenerateColumns="False" CellPadding="7" Style="display: flex" EditRowStyle-HorizontalAlign="Center" ForeColor="#ccffff" GridLines="Both" >
 
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
@@ -46,26 +45,21 @@
                                 <asp:BoundField DataField="category" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Category" />
                                 <asp:BoundField DataField="gst" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="GST" />
                                 <asp:BoundField DataField="packaging" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Packaging" />
-
-
-
-
+                                 <asp:BoundField DataField="quantity" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Quantity" />
+                                <asp:BoundField DataField="total" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Total" />
 
                                 <asp:TemplateField HeaderText="Action" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
 
-                                        <div class="quantity buttons_added">
-	                                        <input type="button" value="-" class="minus">
-                                            <asp:TextBox TextMode="Number" ID="TextBox2" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="" runat="server"></asp:TextBox> 
-                                            <input type="button" value="+" class="plus">
-                                            </div>
+                                      <asp:LinkButton ID="lnkDelete" OnClientClick="return confirm('Are you sure you want to delete this item ? ')"
+                            CommandArgument='<%#Eval("id")%>' runat="server"
+                            CommandName="Delete" CssClass="btn btn-danger" OnClick="lnkDelete_Click">Delete</asp:LinkButton>
 
-                                        <asp:LinkButton ID="lnkEdit" CommandArgument='<%#Container.DataItemIndex%>' runat="server"
-                                            CommandName="Add" CssClass="btn btn-warning" >Add</asp:LinkButton>
-
+                                      
                        
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                              
 
                             </Columns>
                             <EditRowStyle BackColor="#2461BF" Height="50px" />
@@ -80,17 +74,25 @@
                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
 
                         </asp:GridView>
-
-                    </div>
                     
+                  <div class="row"> 
+                    <div style="float:right;margin-right:30px; ">
+                      
+                        <asp:Label ID="Grtotal" runat="server" Font-Bold="True"></asp:Label>
+                       
+                        </div><br /><br /> <div style="float:right;margin-right:25px;width: 170px; ">
+                    <asp:LinkButton id="btnPlace" OnClick="btnPlace_Click" class="btn btn-info btn-block btn-rounded waves-effect waves-light" Text="Place Order"  runat="server"/>
                 </div>
+                      </div>
+                <%--</div>
+                </div>--%>
                 <!-- /.col-lg-12 -->
-            
+            </div>
             <!-- /.row -->
 
             <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
     </div>
-    
+
 </asp:Content>

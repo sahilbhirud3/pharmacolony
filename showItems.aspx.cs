@@ -65,8 +65,7 @@ namespace pharmacolony
         {
             LinkButton lnkEdit = (LinkButton)sender;
             int id = Convert.ToInt32(lnkEdit.CommandArgument.ToString());
-            int dLic = Convert.ToInt32(lnkEdit.CommandArgument.ToString());
-            Response.Redirect(string.Format("~/editItem.aspx?id={0}&dLic={1}",id,dLic));
+            Response.Redirect(string.Format("~/editItem.aspx?id={0}",id));
         }
 
         protected void lnkDelete_Click(object sender, EventArgs e)

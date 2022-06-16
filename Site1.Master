@@ -46,8 +46,8 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				      </button>
-                <div class="navbar-brand" style="height:50px;width:50px;padding:unset">
-    <img src="img/newlogo.gif" class="img-responsive" /></div><img src="img/newlogo.png" />
+                <div class="navbar-brand" style="height:50px;width:auto;padding:unset">
+    <img src="img/newlogo1.gif" class="img-responsive" /></div>
 
 				               
             </div>

@@ -227,6 +227,7 @@
     <Content Include="chosen_v1.8.7\index.html" />
     <Content Include="chosen_v1.8.7\index.proto.html" />
     <Content Include="chosen_v1.8.7\options.html" />
+    <Content Include="css\quantity.css" />
     <Content Include="editItem.aspx" />
     <Content Include="adminDash.aspx" />
     <Content Include="adminLogin.aspx" />
@@ -282,12 +283,14 @@
     <Content Include="img\homeimg.webp" />
     <Content Include="img\mediLogin.png" />
     <Content Include="img\newlogo1.gif" />
+    <Content Include="js\quantity.js" />
     <Content Include="js\jquery.nicescroll.js" />
     <Content Include="js\metisMenu.min.js" />
     <Content Include="js\myadmin.js" />
     <Content Include="js\waves.js" />
     <Content Include="libmongocrypt.so" />
     <Content Include="libmongocrypt.dylib" />
+    <Content Include="medicalCart.aspx" />
     <Content Include="medicalLogin.aspx" />
     <Content Include="mediDash.aspx" />
     <Content Include="select2-4.1.0-rc.0\select2-4.1.0-rc.0\dist\css\select2.css" />
@@ -867,6 +870,12 @@
     </Compile>
     <Compile Include="home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalCart.aspx.cs">
+      <DependentUpon>medicalCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalCart.aspx.designer.cs">
+      <DependentUpon>medicalCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="mediDash.aspx.cs">
       <DependentUpon>mediDash.aspx</DependentUpon>

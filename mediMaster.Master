@@ -108,20 +108,21 @@
                         </div>
                     </li>
                     <li>
-                        <a href="distDash.aspx" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
+                        <a href="mediDash.aspx" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
                             Dashboard</a>
                     </li>
                     <li>
                         <a href="#" class="waves-effect"><i class="fa-solid fa-user"></i>&nbsp Profile</a>
                     </li>
                     <li>
-                        <a href="showItems.aspx" class="waves-effect"><i class="fa-solid fa-clipboard-list"></i>&nbsp; Items</a>
+                        <a href="medicalCart.aspx" class="waves-effect"><i class="fas fa-shopping-cart"></i>&nbsp Cart</a>
                     </li>
                     <li>
-                        <a href="approveMed.aspx" class="waves-effect"><i class="fa-solid fa-calendar-day"></i>&nbsp Today's Orders</a>
+                    <a href="mediOrders.aspx" class="waves-effect"><i class="fa-solid fa-cart-arrow-down"></i>&nbsp; My Orders</a>
+ 
                     </li>
                     <li>
-                        <a href="approveDist.aspx" class="waves-effect"><i class="fa-solid fa-list-check"></i>&nbsp All Orders</a>
+                        <a href="#" class="waves-effect"><i class="fa-solid fa-list-check"></i>&nbsp dummy</a>
                     </li>
                    
                 </ul>

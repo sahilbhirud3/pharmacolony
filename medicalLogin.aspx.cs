@@ -47,8 +47,8 @@ namespace pharmacolony
                     Session["email"] = email.Text;
                     Session["medicalName"] = dt.Rows[0]["medicalName"];
                     Session["licno"] = dt.Rows[0]["licNo"];
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='mediDash.aspx'", true);
-
+                    //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='mediDash.aspx'", true);
+                    Response.Redirect("mediDash.aspx");
                 }
                 else
                 {

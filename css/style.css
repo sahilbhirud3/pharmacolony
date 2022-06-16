@@ -83,7 +83,7 @@ banner
 
 .navbar-brand img {
     padding-top: 2px;
-    width: 50px !important;
+    width: auto;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
