@@ -42,8 +42,8 @@ namespace pharmacolony
             {
                 Session["email"] = email.Text;
                 Session["name"]=dt.Rows[0]["Name"];
-
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='adminDash.aspx'", true);
+                Response.Redirect("adminDash.aspx");
+                //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='adminDash.aspx'", true);
             }
             else
             {

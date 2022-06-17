@@ -26,6 +26,7 @@ namespace pharmacolony
         {
             Session["email"] = null;
             Session["distributorName"] = null;
+            Session["licno"] = null;
             HttpContext.Current.Session.Clear();
             HttpContext.Current.Session.Abandon();
             HttpContext.Current.Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));

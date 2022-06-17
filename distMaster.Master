@@ -117,10 +117,10 @@
                         <a href="showItems.aspx" class="waves-effect"><i class="fa-solid fa-clipboard-list"></i>&nbsp; Items</a>
                     </li>
                     <li>
-                        <a href="approveMed.aspx" class="waves-effect"><i class="fa-solid fa-calendar-day"></i>&nbsp Today's Orders</a>
+                        <a href="distOrder.aspx" class="waves-effect"><i class="fa-solid fa-calendar-day"></i>&nbsp Today's Orders</a>
                     </li>
                     <li>
-                        <a href="approveDist.aspx" class="waves-effect"><i class="fa-solid fa-list-check"></i>&nbsp All Orders</a>
+                        <a href="distAllOrder.aspx" class="waves-effect"><i class="fa-solid fa-list-check"></i>&nbsp All Orders</a>
                     </li>
                    
                 </ul>

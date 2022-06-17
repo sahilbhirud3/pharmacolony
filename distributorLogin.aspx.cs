@@ -47,7 +47,8 @@ namespace pharmacolony
                     Session["email"] = email.Text;
                     Session["distributorName"] = dt.Rows[0]["distributorName"];
                     Session["licno"] = dt.Rows[0]["licNo"];
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='distDash.aspx'", true);
+                    Response.Redirect("distDash.aspx");
+                    //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Successfully'); window.location.href='distDash.aspx'", true);
                     //Response.Write("<script>alert('slogin success')</script>");
                 }
                 else

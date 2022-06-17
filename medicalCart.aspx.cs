@@ -10,8 +10,8 @@ using System.Web.UI.WebControls;
 
 namespace pharmacolony
 {
-    public static class g{
-        public static double gtotal; }
+    //global variable for grand total
+    public static class g{ public static double gtotal; }
     public partial class medicalCart : System.Web.UI.Page
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;

@@ -228,6 +228,10 @@
     <Content Include="chosen_v1.8.7\index.proto.html" />
     <Content Include="chosen_v1.8.7\options.html" />
     <Content Include="css\quantity.css" />
+    <Content Include="distAllOrder.aspx" />
+    <Content Include="distAllOrderView.aspx" />
+    <Content Include="distOrder.aspx" />
+    <Content Include="distOrderView.aspx" />
     <Content Include="editItem.aspx" />
     <Content Include="adminDash.aspx" />
     <Content Include="adminLogin.aspx" />
@@ -252,7 +256,6 @@
     <Content Include="css\metisMenu.min.css" />
     <Content Include="css\morris.css" />
     <Content Include="css\registration.css" />
-    <Content Include="css\style.css" />
     <Content Include="css\style1.css" />
     <Content Include="Default.aspx" />
     <Content Include="distDash.aspx" />
@@ -293,6 +296,8 @@
     <Content Include="medicalCart.aspx" />
     <Content Include="medicalLogin.aspx" />
     <Content Include="mediDash.aspx" />
+    <Content Include="mediOrder.aspx" />
+    <Content Include="mediOrderView.aspx" />
     <Content Include="select2-4.1.0-rc.0\select2-4.1.0-rc.0\dist\css\select2.css" />
     <Content Include="select2-4.1.0-rc.0\select2-4.1.0-rc.0\dist\css\select2.min.css" />
     <Content Include="select2-4.1.0-rc.0\select2-4.1.0-rc.0\dist\js\i18n\af.js" />
@@ -719,6 +724,7 @@
     <Content Include="approveDist.aspx" />
     <Content Include="distMaster.Master" />
     <Content Include="mediMaster.Master" />
+    <Content Include="showQuery.aspx" />
     <Content Include="WebService1.asmx" />
     <Content Include="js\Snippets_Pager.min.js" />
     <Content Include="chosen_v1.8.7\composer.json" />
@@ -782,6 +788,32 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="distAllOrder.aspx.cs">
+      <DependentUpon>distAllOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="distAllOrder.aspx.designer.cs">
+      <DependentUpon>distAllOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="distAllOrderView.aspx.cs">
+      <DependentUpon>distAllOrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="distAllOrderView.aspx.designer.cs">
+      <DependentUpon>distAllOrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="distOrder.aspx.cs">
+      <DependentUpon>distOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="distOrder.aspx.designer.cs">
+      <DependentUpon>distOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="distOrderView.aspx.cs">
+      <DependentUpon>distOrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="distOrderView.aspx.designer.cs">
+      <DependentUpon>distOrderView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="editItem.aspx.cs">
       <DependentUpon>editItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -891,6 +923,19 @@
     <Compile Include="mediMaster.Master.designer.cs">
       <DependentUpon>mediMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="mediOrder.aspx.cs">
+      <DependentUpon>mediOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediOrder.aspx.designer.cs">
+      <DependentUpon>mediOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mediOrderView.aspx.cs">
+      <DependentUpon>mediOrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mediOrderView.aspx.designer.cs">
+      <DependentUpon>mediOrderView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registration.aspx.cs">
       <DependentUpon>registration.aspx</DependentUpon>
@@ -919,6 +964,13 @@
     </Compile>
     <Compile Include="showMed.aspx.designer.cs">
       <DependentUpon>showMed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="showQuery.aspx.cs">
+      <DependentUpon>showQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showQuery.aspx.designer.cs">
+      <DependentUpon>showQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

@@ -122,6 +122,9 @@
                     <li>
                         <a href="showDist.aspx" class="waves-effect"><i class="fa-solid fa-house-chimney-medical"></i>&nbsp; All Distributors</a>
                     </li>
+                     <li>
+                        <a href="showQuery.aspx" class="waves-effect"><i class="fa-solid fa-clipboard-question"></i>&nbsp; Query</a>
+                    </li>
                     <%--<li>
                         <a href="404.html" class="waves-effect"><i class="fa-solid fa-barcode-read"></i>&nbsp; Order</a>
                     </li>--%>

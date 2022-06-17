@@ -58,7 +58,7 @@
         <div class="row"  >
           <div class="banner-info" style="justify-content:center;" >
             <div class="banner-logo text-center">
-              <img src="img/pharmalogo.gif" height="160" width="200" class="img-responsive" />
+              <img src="img/pharmalogo.gif" height="auto" width="180" class="img-responsive" />
             </div>
             <div class="banner-text text-center">
               <h1 class="white">Distributor at your desk!!</h1>
@@ -266,6 +266,8 @@ Distributor will process orders received from medical stores through this system
               <div class="form-group">
                   <asp:TextBox ID="qemail" TextMode="Email" class="form-control br-radius-zero" placeholder="Your Email" runat="server"></asp:TextBox>
                   <asp:RequiredFieldValidator ValidationGroup="query" ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredField" Font-Overline="False" ControlToValidate="qemail"></asp:RequiredFieldValidator>
+                  <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Email" ControlToValidate="qemail" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"></asp:RegularExpressionValidator>
+
                   <div class="validation"></div>
               </div>
               <div class="form-group">
@@ -279,8 +281,8 @@ Distributor will process orders received from medical stores through this system
                   <div class="validation"></div>
               </div>
               <div class="form-action">
-                  <asp:Button ID="Button1" ValidationGroup="query" CssClass="btn btn-form" runat="server" Text="Send Message" />
-      <%--OnClick="query_Click" --%>
+                  <asp:Button ID="Button1" ValidationGroup="query" CssClass="btn btn-form" runat="server" OnClick="Button1_Click" Text="Send Message" />
+
               </div>
 
             </div>

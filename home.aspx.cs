@@ -35,28 +35,42 @@ namespace pharmacolony
             //protected void query_Click(object sender, EventArgs e)
             //{
             //    //String name = String.Empty;
-            //String email = String.Empty;
-            //String subject = String.Empty;
-            //String message = String.Empty;
+            //    String email = String.Empty;
+            //    String subject = String.Empty;
+            //    String message = String.Empty;
 
-            //var client = new MongoClient("mongodb+srv://pharmacolony:pharmadb123@pharmacolony.ywbv8.mongodb.net/test");
-            //var db = client.GetDatabase("pharmacolony");
-            //var things = db.GetCollection<BsonDocument>("query");
+            //    var client = new MongoClient("mongodb+srv://pharmacolony:pharmadb123@pharmacolony.ywbv8.mongodb.net/test");
+            //    var db = client.GetDatabase("pharmacolony");
+            //    var things = db.GetCollection<BsonDocument>("query");
 
-            //name = qname.Text;
-            //email = qemail.Text;
-            //subject = qsub.Text;
-            //message= qmsg.Text;
+            //    name = qname.Text;
+            //    email = qemail.Text;
+            //    subject = qsub.Text;
+            //    message= qmsg.Text;
 
-            //var doc = new BsonDocument
+            //    var doc = new BsonDocument
             //        {
             //            {"name", name},{"email", email},{"subject",subject },{"message", message}
             //          };
 
-            //things.InsertOne(doc);
+            //    things.InsertOne(doc);
 
-            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Your Query Submitted Successfully,Be patient'); window.location.href='home.aspx#contact'", true);
-            // }
+            //    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Your Query Submitted Successfully,Be patient'); window.location.href='home.aspx#contact'", true);
+            //}
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+           
+            SqlConnection con = new SqlConnection(connectionString);
+            string query = "Insert into query(name,email,subject,message) Values('" + qname.Text + "','" + qemail.Text + "','" + qsub.Text + "','" + qmsg.Text+ "')";
+            SqlDataAdapter da1 = new SqlDataAdapter(query, con);
+            con.Open();
+            da1.SelectCommand.ExecuteNonQuery();
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Your Query Has Submitted '); window.location.href='home.aspx'", true);
+
+            con.Close();
         }
     }
 }

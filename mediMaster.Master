@@ -118,7 +118,7 @@
                         <a href="medicalCart.aspx" class="waves-effect"><i class="fas fa-shopping-cart"></i>&nbsp Cart</a>
                     </li>
                     <li>
-                    <a href="mediOrders.aspx" class="waves-effect"><i class="fa-solid fa-cart-arrow-down"></i>&nbsp; My Orders</a>
+                    <a href="mediOrder.aspx" class="waves-effect"><i class="fa-solid fa-cart-arrow-down"></i>&nbsp; My Orders</a>
  
                     </li>
                     <li>
