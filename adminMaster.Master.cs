@@ -11,8 +11,10 @@ namespace pharmacolony
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (Session["email"] != null)
             {
+                showActive();
                 Label1.Text = (string)Session["email"];
                 Label2.Text = (string)Session["name"];
             }
@@ -21,6 +23,35 @@ namespace pharmacolony
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('You are not logged in,Try Login'); window.location.href='home.aspx#login'", true);
 
             }
+        }
+        protected void showActive()
+        {
+            String activepage = Request.RawUrl;
+            if (activepage.Contains("adminDash"))
+            {
+                dash.Attributes.Add("class", "active");
+            }
+            else if (activepage.Contains("approveMed"))
+            {
+                approveMed.Attributes.Add("class", "active");
+            }
+            else if (activepage.Contains("approveDist"))
+            {
+                approveDist.Attributes.Add("class", "active");
+            }
+            else if (activepage.Contains("showMed"))
+            {
+                showMed.Attributes.Add("class", "active");
+            }
+            else if (activepage.Contains("showDist"))
+            {
+                showDist.Attributes.Add("class", "active");
+            }
+            else if (activepage.Contains("showQuery"))
+            {
+                showQuery.Attributes.Add("class", "active");
+            }
+
         }
         protected void BtnLogout_Click(object sender, EventArgs e)
         {

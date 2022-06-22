@@ -11,6 +11,8 @@ namespace pharmacolony
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            showActive();
             //if (Session["email"] != null)
             //{
             Label1.Text = (string)Session["email"];
@@ -22,6 +24,32 @@ namespace pharmacolony
 
             //}
         }
+        protected void showActive()
+        {
+            String activepage = Request.RawUrl;
+            if (activepage.Contains("distDash"))
+            {
+                dash.Attributes.Add("class", "active");
+            }
+            else if(activepage.Contains("showItems"))
+            {
+                items.Attributes.Add("class", "active");
+            }
+            else if (activepage.Contains("distOrder"))
+            {
+                order.Attributes.Add("class", "active");
+            }
+            else if (activepage.Contains("distAllOrder"))
+            {
+                allorder.Attributes.Add("class", "active");
+            }
+            else if (activepage.Contains("distProfile"))
+            {
+                profile.Attributes.Add("class", "active");
+            }
+
+        }
+
         protected void BtnLogout_Click(object sender, EventArgs e)
         {
             Session["email"] = null;

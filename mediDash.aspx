@@ -32,7 +32,7 @@
                        </script>--%>
                         <asp:TextBox ID="TextBox1" AutoPostBack="true" OnTextChanged="TextBox1_TextChanged" runat="server"></asp:TextBox>
     
-                        <asp:GridView ID="grid1" runat="server" AutoGenerateColumns="False" CellPadding="7" Style="display: flex" EditRowStyle-HorizontalAlign="Center" ForeColor="#ccffff" GridLines="Both" OnRowCommand="grid1_RowCommand">
+                        <asp:GridView ID="grid1" runat="server" AutoGenerateColumns="False" CellPadding="7" Style="display: flex" EditRowStyle-HorizontalAlign="Center" ForeColor="#ccffff" GridLines="Vertical" OnRowCommand="grid1_RowCommand">
 
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
@@ -58,7 +58,7 @@
 	                                        <input type="button" value="-" class="minus">
                                             <asp:TextBox TextMode="Number" ID="TextBox2" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="" runat="server"></asp:TextBox> 
                                             <input type="button" value="+" class="plus">
-                                            </div>
+                                        </div>
 
                                         <asp:LinkButton ID="lnkEdit" CommandArgument='<%#Container.DataItemIndex%>' runat="server"
                                             CommandName="Add" CssClass="btn btn-warning" >Add</asp:LinkButton>

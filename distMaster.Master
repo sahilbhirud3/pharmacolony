@@ -69,7 +69,7 @@
                     href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i
                         class="ti-menu"></i></a>
                 <div class="top-left-part"><a class="logo" href="distDash.aspx">
-                    <i class="fa-solid fa-user-gear"></i>&nbsp;&nbsp;&nbsp;HI &nbsp;&nbsp;<asp:Label ID="Label2" runat="server" class="hidden-xs"></asp:Label></a></div>
+                    <i class="fa-solid fa-user-gear"></i><asp:Label ID="Label2" runat="server" class="hidden-xs"></asp:Label></a></div>
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
                     <li><a src="javascript:void(0)" class="open-close hidden-xs hidden-lg
  waves-effect waves-light">
@@ -107,25 +107,26 @@
                         </div>
                     </li>
                     <li>
-                        <a href="distDash.aspx" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
+                        <a id="dash" runat="server" href="distDash.aspx"  class="waves-effect" ><i class="glyphicon glyphicon-fire fa-fw"></i>
                             Dashboard</a>
                     </li>
                     <li>
-                        <a href="#" class="waves-effect"><i class="fa-solid fa-user"></i>&nbsp Profile</a>
+                        
+                        <a id="profile" runat="server" href="distProfile.aspx" class="waves-effect"><i class="fa-solid fa-user"></i>&nbsp Profile</a>
                     </li>
                     <li>
-                        <a href="showItems.aspx" class="waves-effect"><i class="fa-solid fa-clipboard-list"></i>&nbsp; Items</a>
+                        <a id="items" runat="server" href="showItems.aspx" class="waves-effect"><i class="fa-solid fa-clipboard-list"></i>&nbsp; Items</a>
                     </li>
                     <li>
-                        <a href="distOrder.aspx" class="waves-effect"><i class="fa-solid fa-calendar-day"></i>&nbsp Today's Orders</a>
+                        <a id="order" runat="server" href="distOrder.aspx" class="waves-effect"><i class="fa-solid fa-calendar-day"></i>&nbsp Today's Orders</a>
                     </li>
                     <li>
-                        <a href="distAllOrder.aspx" class="waves-effect"><i class="fa-solid fa-list-check"></i>&nbsp All Orders</a>
+                        <a id="allorder" runat="server" href="distAllOrder.aspx" class="waves-effect"><i class="fa-solid fa-list-check"></i>&nbsp All Orders</a>
                     </li>
                    
                 </ul>
                 <div class="center p-20">
-                    <asp:LinkButton id="btnLogout" class="btn btn-info btn-block btn-rounded waves-effect waves-light" Text="Logout" OnClick="BtnLogout_Click" runat="server"/>
+                    <asp:LinkButton id="btnLogout" class="btn btn-info btn-block btn-rounded waves-effect waves-light" Text="Logout" OnClick="BtnLogout_Click" runat="server" CausesValidation="false"/>
 
                 </div>
             </div>
@@ -139,7 +140,7 @@
            </form>
         <footer class="footer text-center"> PharmaColony  &nbsp &nbsp  A Better access to medilife  &nbsp &nbsp @2022    </footer>
     </div>
-
+    
       
     <!-- /#wrapper -->
     <!-- jQuery -->

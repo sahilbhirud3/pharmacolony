@@ -23,30 +23,29 @@
                             <div class="row row-in">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="col-in text-center">
-                                        <h5 class="text-danger">Chrome</h5>
-                                        <h3 class="counter">5645</h3>
+                                        <h5 class="text-danger">Total Items</h5>
+                                        <h3 class="counter"><asp:Label ID="Label1" runat="server" ></asp:Label></h3>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="col-in text-center b-r-none">
-                                        <h5 class="text-muted text-warning">Mozila</h5>
-                                        <h3 class="counter">4250</h3>
+                                        <h5 class="text-muted text-warning">Today's Order</h5>
+                                        <h3 class="counter"><asp:Label ID="Label2" runat="server" ></asp:Label></h3>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="col-in text-center">
-                                        <h5 class="text-muted text-purple">Safari</h5>
-                                        <h3 class="counter">3450</h3>
+                                        <h5 class="text-muted text-purple"><asp:Label ID="Label5" runat="server" ></asp:Label> Orders</h5>
+                                        <h3 class="counter"><asp:Label ID="Label3" runat="server" ></asp:Label></h3>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="col-in text-center b-0">
-                                        <h5 class="text-info">Explorer</h5>
-                                        <h3 class="counter">2500</h3>
+                                        <h5 class="text-info">Total Orders</h5>
+                                        <h3 class="counter"><asp:Label ID="Label4" runat="server" ></asp:Label></h3>
                                     </div>
-                                </div>
+                                </div> 
                             </div>
-                            <div id="morris-area-chart" style="height: 345px;"></div>
                         </div>
                     </div>
                 </div>

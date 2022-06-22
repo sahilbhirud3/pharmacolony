@@ -227,11 +227,14 @@
     <Content Include="chosen_v1.8.7\index.html" />
     <Content Include="chosen_v1.8.7\index.proto.html" />
     <Content Include="chosen_v1.8.7\options.html" />
+    <Content Include="css\forgotPass.css" />
     <Content Include="css\quantity.css" />
     <Content Include="distAllOrder.aspx" />
     <Content Include="distAllOrderView.aspx" />
+    <Content Include="distChangePass.aspx" />
     <Content Include="distOrder.aspx" />
     <Content Include="distOrderView.aspx" />
+    <Content Include="distProfile.aspx" />
     <Content Include="editItem.aspx" />
     <Content Include="adminDash.aspx" />
     <Content Include="adminLogin.aspx" />
@@ -262,6 +265,8 @@
     <Content Include="distributorLogin.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="distForgotPassword.aspx" />
+    <Content Include="forgotPassword.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -295,9 +300,13 @@
     <Content Include="libmongocrypt.dylib" />
     <Content Include="medicalCart.aspx" />
     <Content Include="medicalLogin.aspx" />
+    <Content Include="mediChangePass.aspx" />
     <Content Include="mediDash.aspx" />
     <Content Include="mediOrder.aspx" />
     <Content Include="mediOrderView.aspx" />
+    <Content Include="mediProfile.aspx" />
+    <Content Include="distResetPassword.aspx" />
+    <Content Include="resetPassword.aspx" />
     <Content Include="select2-4.1.0-rc.0\select2-4.1.0-rc.0\dist\css\select2.css" />
     <Content Include="select2-4.1.0-rc.0\select2-4.1.0-rc.0\dist\css\select2.min.css" />
     <Content Include="select2-4.1.0-rc.0\select2-4.1.0-rc.0\dist\js\i18n\af.js" />
@@ -801,6 +810,13 @@
     <Compile Include="distAllOrderView.aspx.designer.cs">
       <DependentUpon>distAllOrderView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="distChangePass.aspx.cs">
+      <DependentUpon>distChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="distChangePass.aspx.designer.cs">
+      <DependentUpon>distChangePass.aspx</DependentUpon>
+    </Compile>
     <Compile Include="distOrder.aspx.cs">
       <DependentUpon>distOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -813,6 +829,13 @@
     </Compile>
     <Compile Include="distOrderView.aspx.designer.cs">
       <DependentUpon>distOrderView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="distProfile.aspx.cs">
+      <DependentUpon>distProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="distProfile.aspx.designer.cs">
+      <DependentUpon>distProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="editItem.aspx.cs">
       <DependentUpon>editItem.aspx</DependentUpon>
@@ -893,6 +916,20 @@
     <Compile Include="distributorLogin.aspx.designer.cs">
       <DependentUpon>distributorLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="distForgotPassword.aspx.cs">
+      <DependentUpon>distForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="distForgotPassword.aspx.designer.cs">
+      <DependentUpon>distForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgotPassword.aspx.cs">
+      <DependentUpon>forgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgotPassword.aspx.designer.cs">
+      <DependentUpon>forgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -908,6 +945,13 @@
     </Compile>
     <Compile Include="medicalCart.aspx.designer.cs">
       <DependentUpon>medicalCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mediChangePass.aspx.cs">
+      <DependentUpon>mediChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediChangePass.aspx.designer.cs">
+      <DependentUpon>mediChangePass.aspx</DependentUpon>
     </Compile>
     <Compile Include="mediDash.aspx.cs">
       <DependentUpon>mediDash.aspx</DependentUpon>
@@ -936,6 +980,13 @@
     <Compile Include="mediOrderView.aspx.designer.cs">
       <DependentUpon>mediOrderView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="mediProfile.aspx.cs">
+      <DependentUpon>mediProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mediProfile.aspx.designer.cs">
+      <DependentUpon>mediProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registration.aspx.cs">
       <DependentUpon>registration.aspx</DependentUpon>
@@ -943,6 +994,20 @@
     </Compile>
     <Compile Include="registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="distResetPassword.aspx.cs">
+      <DependentUpon>distResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="distResetPassword.aspx.designer.cs">
+      <DependentUpon>distResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resetPassword.aspx.cs">
+      <DependentUpon>resetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resetPassword.aspx.designer.cs">
+      <DependentUpon>resetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="showDist.aspx.cs">
       <DependentUpon>showDist.aspx</DependentUpon>

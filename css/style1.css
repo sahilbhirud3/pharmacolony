@@ -732,13 +732,14 @@ label {
 
     .top-left-part a {
         color: #fff;
-        font-size: 18px;
+        font-size: 12px;
         line-height: 50px;
         padding-left: 15px;
         text-transform: uppercase
     }
 
 .navbar-header {
+    height:50px;
     width: 100%;
     background: #fff;
     border: 0

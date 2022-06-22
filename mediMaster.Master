@@ -108,26 +108,26 @@
                         </div>
                     </li>
                     <li>
-                        <a href="mediDash.aspx" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
+                        <a id="dash" runat="server" href="mediDash.aspx" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
                             Dashboard</a>
                     </li>
                     <li>
-                        <a href="#" class="waves-effect"><i class="fa-solid fa-user"></i>&nbsp Profile</a>
+                        <a href="mediProfile.aspx" id="mediProfile" runat="server" class="waves-effect"><i class="fa-solid fa-user"></i>&nbsp Profile</a>
                     </li>
                     <li>
-                        <a href="medicalCart.aspx" class="waves-effect"><i class="fas fa-shopping-cart"></i>&nbsp Cart</a>
+                        <a id="medicalCart" runat="server" href="medicalCart.aspx" class="waves-effect"><i class="fas fa-shopping-cart"></i>&nbsp Cart</a>
                     </li>
                     <li>
-                    <a href="mediOrder.aspx" class="waves-effect"><i class="fa-solid fa-cart-arrow-down"></i>&nbsp; My Orders</a>
+                    <a id="mediOrder" runat="server" href="mediOrder.aspx" class="waves-effect"><i class="fa-solid fa-cart-arrow-down"></i>&nbsp; My Orders</a>
  
                     </li>
-                    <li>
-                        <a href="#" class="waves-effect"><i class="fa-solid fa-list-check"></i>&nbsp dummy</a>
-                    </li>
+                   <%-- <li>
+                        <a id="dash" runat="server" href="#" class="waves-effect"><i class="fa-solid fa-list-check"></i>&nbsp dummy</a>
+                    </li>--%>
                    
                 </ul>
                 <div class="center p-20">
-                    <asp:LinkButton id="btnLogout" class="btn btn-info btn-block btn-rounded waves-effect waves-light" Text="Logout" OnClick="BtnLogout_Click" runat="server"/>
+                    <asp:LinkButton id="btnLogout" class="btn btn-info btn-block btn-rounded waves-effect waves-light" Text="Logout" OnClick="BtnLogout_Click" runat="server" CausesValidation="false"/>
 
                 </div>
             </div>

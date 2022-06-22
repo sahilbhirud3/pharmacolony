@@ -106,24 +106,24 @@
                         </div>
                     </li>
                     <li>
-                        <a href="adminDash.aspx" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
+                        <a id="dash" runat="server" href="adminDash.aspx" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
                             Dashboard</a>
                     </li>
                    
                     <li>
-                        <a href="approveMed.aspx" class="waves-effect"><i class="fa-solid fa-laptop-medical"></i>&nbsp Approve Medical</a>
+                        <a id="approveMed" runat="server" href="approveMed.aspx" class="waves-effect"><i class="fa-solid fa-laptop-medical"></i>&nbsp Approve Medical</a>
                     </li>
                     <li>
-                        <a href="approveDist.aspx" class="waves-effect"><i class="fa-solid fa-building-circle-arrow-right"></i>&nbsp Approve Distributor</a>
+                        <a id="approveDist" runat="server" href="approveDist.aspx" class="waves-effect"><i class="fa-solid fa-building-circle-arrow-right"></i>&nbsp Approve Distributor</a>
                     </li>
                     <li>
-                        <a href="showMed.aspx" class="waves-effect"><i class="fa-solid fa-house-medical"></i>&nbsp; All Medicals</a>
+                        <a id="showMed" runat="server" href="showMed.aspx" class="waves-effect"><i class="fa-solid fa-house-medical"></i>&nbsp; All Medicals</a>
                     </li>
                     <li>
-                        <a href="showDist.aspx" class="waves-effect"><i class="fa-solid fa-house-chimney-medical"></i>&nbsp; All Distributors</a>
+                        <a id="showDist" runat="server" href="showDist.aspx" class="waves-effect"><i class="fa-solid fa-house-chimney-medical"></i>&nbsp; All Distributors</a>
                     </li>
                      <li>
-                        <a href="showQuery.aspx" class="waves-effect"><i class="fa-solid fa-clipboard-question"></i>&nbsp; Query</a>
+                        <a id="showQuery" runat="server" href="showQuery.aspx" class="waves-effect"><i class="fa-solid fa-clipboard-question"></i>&nbsp; Query</a>
                     </li>
                     <%--<li>
                         <a href="404.html" class="waves-effect"><i class="fa-solid fa-barcode-read"></i>&nbsp; Order</a>
