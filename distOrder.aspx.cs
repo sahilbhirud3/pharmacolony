@@ -29,8 +29,8 @@ namespace pharmacolony
             using (SqlConnection con = new SqlConnection(connectionString))
             {
 
-                string sql = "SELECT DISTINCT [o].[id] ,[m].[medicalName],[o].[datetime],[o].[gtotal] FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i,[dbo].[distributor] as d,[dbo].[medical] as m WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic=[d].licNo AND [o].licNo=[m].licNo AND [d].licNo='"+Session["licno"]+"' AND cast(datetime as date)=cast(getdate() as date) ORDER BY datetime DESC ";
-
+                //string sql = "SELECT DISTINCT [o].[id] ,[m].[medicalName],[o].[datetime],[o].[gtotal] FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i,[dbo].[distributor] as d,[dbo].[medical] as m WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic=[d].licNo AND [o].licNo=[m].licNo AND [d].licNo='"+Session["licno"]+"' AND cast(datetime as date)=cast(getdate() as date) ORDER BY datetime DESC ";
+                string sql = "SELECT [o].[id] ,m.medicalName,[o].[datetime],[o].[gtotal],subquery1.ototal FROM [dbo].[order] as o,(SELECT sum(total) as ototal,o.id FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i,[dbo].[distributor] as d,[dbo].[medical] as m WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic=[d].licNo AND [o].licNo=[m].licNo AND [d].licNo='"+Session["licno"]+"' group by o.id ) subquery1 ,medical as m WHERE [o].id=subquery1.id AND m.licNo=o.licNo AND cast(datetime as date)=cast(getdate() as date) ORDER BY datetime DESC ";
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
 
                 DataTable dt = new DataTable();

@@ -308,3 +308,4 @@ C:\Users\sahil\source\repos\pharmacolony1\obj\Debug\pharmacolony.csproj.CoreComp
 C:\Users\sahil\source\repos\pharmacolony1\obj\Debug\pharmacolony.csproj.CopyComplete
 C:\Users\sahil\source\repos\pharmacolony1\obj\Debug\pharmacolony.dll
 C:\Users\sahil\source\repos\pharmacolony1\obj\Debug\pharmacolony.pdb
+C:\Users\sahil\source\repos\pharmacolony1\bin\Razorpay.dll

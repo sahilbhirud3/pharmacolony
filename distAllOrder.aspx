@@ -39,12 +39,11 @@
                                <asp:BoundField DataField="medicalName" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Medical Name" />
                                 <asp:BoundField DataField="datetime" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Order Date & Time" />
 
-                                <asp:BoundField DataField="gtotal" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Grand Total" />
+                                <asp:BoundField DataField="ototal" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Grand Total" />
 <%--                                <asp:BoundField DataField="status" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center" HeaderText="Order Status" />--%>
 
                                 <asp:TemplateField HeaderText="Action" ItemStyle-Width="150px" ItemStyle-Wrap="false" ItemStyle-HorizontalAlign="Center">
                                     <ItemTemplate>
-
                                       <asp:LinkButton ID="lnkView" CommandArgument='<%#Eval("id")%>' runat="server"  CommandName="View" CssClass="btn btn-primary" OnClick="lnkView_Click">View</asp:LinkButton>
 
                                   

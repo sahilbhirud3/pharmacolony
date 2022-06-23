@@ -23,9 +23,9 @@ namespace pharmacolony
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string sql = "SELECT COUNT(id) FROM item WHERE dLic='"+Session["licno"]+"'";
-                string sql1 = "SELECT DISTINCT count([o].[id]) FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic='"+Session["licno"]+"' AND cast(datetime as date)=cast(getdate() as date) ";
-                string sql2 = "SELECT DISTINCT count([o].[id]) FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic='"+Session["licno"]+"' AND DATEPART(mm,datetime)=DATEPART(MONTH,getdate()) AND datepart(yyyy,datetime) =year(getdate())  ";
-                string sql3 = "SELECT DISTINCT count([o].[id]) FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic='"+Session["licno"]+"'";
+                string sql1 = "SELECT  count(DISTINCT [o].[id]) FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic='"+Session["licno"]+"' AND cast(datetime as date)=cast(getdate() as date) ";
+                string sql2 = "SELECT  count(DISTINCT [o].[id]) FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic='"+Session["licno"]+"' AND DATEPART(mm,datetime)=DATEPART(MONTH,getdate()) AND datepart(yyyy,datetime) =year(getdate())  ";
+                string sql3 = "SELECT  count(DISTINCT [o].[id]) FROM [dbo].[order] as o,[dbo].[order_item] as oi,[dbo].[item] as i WHERE [o].id=[oi].order_id AND [oi].item_id=[i].id AND [i].dLic='"+Session["licno"]+"'";
 
                 //string sql2 = "SELECT COUNT(id) FROM item";
                 // string sql3 = "SELECT COUNT(id) FROM [dbo].[order]";
